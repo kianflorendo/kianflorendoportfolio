@@ -61,6 +61,14 @@ const Skills = () => {
                 <span className="skill-name">React</span>
               </div>
               <div className="skill-item">
+                <i className="devicon-nextjs-plain colored skill-icon"></i>
+                <span className="skill-name">Next.js</span>
+              </div>
+              <div className="skill-item">
+                <i className="devicon-vitejs-plain colored skill-icon"></i>
+                <span className="skill-name">Vite</span>
+              </div>
+              <div className="skill-item">
                 <i className="devicon-nodejs-plain colored skill-icon"></i>
                 <span className="skill-name">Node.js</span>
               </div>

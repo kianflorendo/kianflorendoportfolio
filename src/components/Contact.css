@@ -74,8 +74,61 @@
   transform: translateY(0);
 }
 
+@media (max-width: 992px) {
+  .contact {
+    padding: 4rem 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .contact {
-    padding: 3.5rem 1.5rem;
+    padding: 3rem 1.5rem;
+  }
+  
+  .contact-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .btn-primary {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 2.5rem 1rem;
+  }
+  
+  .contact-content p {
+    font-size: 0.9rem;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    gap: 0.8rem;
+  }
+  
+  .social-links a {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
   }
 }

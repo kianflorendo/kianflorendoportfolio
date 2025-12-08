@@ -74,3 +74,26 @@ html {
   background: var(--primary);
   color: white;
 }
+
+/* Mobile-first improvements */
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+    scroll-padding-top: 70px;
+  }
+  
+  body {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+    scroll-padding-top: 60px;
+  }
+  
+  body {
+    font-size: 0.9rem;
+  }
+}
