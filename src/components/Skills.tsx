@@ -65,7 +65,7 @@ const Skills = () => {
                 <span className="skill-name">Next.js</span>
               </div>
               <div className="skill-item">
-                <i className="devicon-vitejs-plain colored skill-icon"></i>
+                <div className="vite-icon"></div>
                 <span className="skill-name">Vite</span>
               </div>
               <div className="skill-item">
