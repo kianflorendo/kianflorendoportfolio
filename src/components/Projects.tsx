@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './Projects.css';
@@ -67,6 +68,23 @@ const Projects = () => {
         '/images/Screenshot (33).png',
       ],
     },
+    {
+      id: 4,
+      title: 'Clara.AI',
+      description: "The world's first AI Integrity Companion designed to replace workplace surveillance with active support.",
+      image: '/images/clara-main.png',
+      tags: ['AI', 'Ethics', 'Workplace', 'Innovation'],
+      details: [
+        'Clara.AI is the world\'s first AI Integrity Companion designed to replace workplace surveillance with active support. While traditional tools focus on tracking productivity and punishing mistakes, Clara operates as an ethical ally a "Work Kumare" who prioritizes growth over judgment.',
+        'By utilizing advanced sentiment monitoring and privacy-first coaching, Clara detects "ethical drift" before it becomes a violation. She empowers employees to self-correct through features like Trust Currency and Redemption Quests, ensuring that the workplace is defined by confidence and transparency rather than fear and blame.',
+        'Clara proves that the future of corporate compliance isn\'t about watching people; it\'s about empowering them.',
+      ],
+      detailImages: [
+        '/images/clara-detail-1.png',
+        '/images/clara-detail-2.png',
+        '/images/clara-detail-3.png',
+      ],
+    },
   ];
 
   const toggleProject = (projectId: number) => {
@@ -79,7 +97,7 @@ const Projects = () => {
         if (element) {
           const elementPosition = element.getBoundingClientRect().top;
           const screenPosition = window.innerHeight / 1.3;
-          
+
           if (elementPosition < screenPosition) {
             element.classList.add('active');
           }
@@ -100,8 +118,8 @@ const Projects = () => {
       </div>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div 
-            key={project.id} 
+          <div
+            key={project.id}
             className="card animate"
             ref={el => { cardsRef.current[index] = el; }}
           >
@@ -114,7 +132,7 @@ const Projects = () => {
                   <span key={idx} className="card-tag">{tag}</span>
                 ))}
               </div>
-              <div 
+              <div
                 className="view-more"
                 onClick={() => toggleProject(project.id)}
               >
@@ -124,9 +142,9 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      
+
       {/* Modal Popup */}
-      {expandedProject !== null && (
+      {expandedProject !== null && createPortal(
         <div className="modal-overlay" onClick={() => setExpandedProject(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setExpandedProject(null)}>
@@ -135,19 +153,19 @@ const Projects = () => {
             {projects.find(p => p.id === expandedProject) && (
               <div className="modal-layout">
                 <div className="modal-left">
-                  <img 
-                    src={projects.find(p => p.id === expandedProject)!.image} 
+                  <img
+                    src={projects.find(p => p.id === expandedProject)!.image}
                     alt={projects.find(p => p.id === expandedProject)!.title}
                     className="modal-main-image"
                     onClick={() => setLightboxImage(projects.find(p => p.id === expandedProject)!.image)}
                   />
                   <div className="modal-sub-images">
                     {projects.find(p => p.id === expandedProject)!.detailImages.map((img, idx) => (
-                      <img 
-                        key={idx} 
-                        src={img} 
-                        alt={`Detail ${idx + 1}`} 
-                        className="modal-sub-image" 
+                      <img
+                        key={idx}
+                        src={img}
+                        alt={`Detail ${idx + 1}`}
+                        className="modal-sub-image"
                         onClick={() => setLightboxImage(img)}
                       />
                     ))}
@@ -169,22 +187,24 @@ const Projects = () => {
               </div>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Lightbox for Full Screen Image */}
-      {lightboxImage && (
+      {lightboxImage && createPortal(
         <div className="lightbox-overlay" onClick={() => setLightboxImage(null)}>
           <button className="lightbox-close" onClick={() => setLightboxImage(null)}>
             ×
           </button>
-          <img 
-            src={lightboxImage} 
-            alt="Full screen view" 
+          <img
+            src={lightboxImage}
+            alt="Full screen view"
             className="lightbox-image"
             onClick={(e) => e.stopPropagation()}
           />
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );
