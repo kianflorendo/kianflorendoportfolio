@@ -41,7 +41,7 @@ const LicensesCertifications = () => {
         {
             name: "AI Engineer for Data Scientists Associate",
             issuer: "DataCamp",
-            date: "2024",
+            date: "2025",
             credentialId: "AEDS0019472450806",
             credentialUrl: "https://www.datacamp.com/certificate/AEDS0019472450806",
             imageUrl: "/images/certificates/AI Engineer for Data Scientists Associate - Facebook - Post.png"
@@ -49,7 +49,7 @@ const LicensesCertifications = () => {
         {
             name: "Certified Data Science Associate",
             issuer: "DataCamp",
-            date: "2024",
+            date: "2025",
             credentialId: "DSA0017610904765",
             credentialUrl: "https://www.datacamp.com/certificate/DSA0017610904765",
             imageUrl: "/images/certificates/DS Associate - Facebook - Post.png"
@@ -57,21 +57,21 @@ const LicensesCertifications = () => {
         {
             name: "Computer Vision Course",
             issuer: "Kaggle",
-            date: "2024",
+            date: "2025",
             credentialUrl: "https://www.kaggle.com/learn/certification/kianangeloflorendo/computer-vision",
             imageUrl: "/images/certificates/Kian Angelo Florendo - Computer Vision (1).png"
         },
         {
             name: "Intermediate Machine Learning Course",
             issuer: "Kaggle",
-            date: "2024",
+            date: "2025",
             credentialUrl: "https://www.kaggle.com/learn/certification/kianangeloflorendo/intermediate-machine-learning",
             imageUrl: "/images/certificates/Kian Angelo Florendo - Intermediate Machine Learning (1).png"
         },
         {
             name: "Feature Engineering Course",
             issuer: "Kaggle",
-            date: "2024",
+            date: "2025",
             credentialUrl: "https://www.kaggle.com/learn/certification/kianangeloflorendo/feature-engineering",
             imageUrl: "/images/certificates/Kian Angelo Florendo - Feature Engineering (1).png"
         }
