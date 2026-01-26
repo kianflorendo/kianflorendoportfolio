@@ -1,5 +1,5 @@
 .about {
-  background: linear-gradient(180deg, rgba(10, 14, 26, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+  background: linear-gradient(180deg, #000000 0%, #050505 100%);
   padding: 5rem 4rem;
   position: relative;
 }
@@ -46,7 +46,7 @@
   .section-title {
     margin-bottom: 2.5rem;
   }
-  
+
   .section-title h2 {
     font-size: 2rem;
   }
@@ -56,11 +56,11 @@
   .section-title {
     margin-bottom: 2rem;
   }
-  
+
   .section-title h2 {
     font-size: 1.6rem;
   }
-  
+
   .section-title h2::after {
     width: 40px;
     height: 2px;
@@ -164,7 +164,7 @@
   .about {
     padding: 4rem 2rem;
   }
-  
+
   .about-content {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -175,24 +175,24 @@
   .about {
     padding: 3rem 1.5rem;
   }
-  
+
   .about-content {
     gap: 2rem;
   }
-  
+
   .about-text h3 {
     font-size: 1.3rem;
   }
-  
+
   .about-text p {
     font-size: 0.95rem;
     line-height: 1.7;
   }
-  
+
   .skills-list {
     gap: 0.6rem;
   }
-  
+
   .skill-chip {
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
@@ -203,15 +203,15 @@
   .about {
     padding: 2.5rem 1rem;
   }
-  
+
   .about-text h3 {
     font-size: 1.2rem;
   }
-  
+
   .about-text p {
     font-size: 0.9rem;
   }
-  
+
   .skill-chip {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;

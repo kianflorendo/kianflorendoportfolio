@@ -1,0 +1,337 @@
+.licenses-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5rem 4rem;
+}
+
+.certifications-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.certification-card {
+    background: linear-gradient(135deg, rgba(5, 5, 5, 0.8) 0%, rgba(10, 10, 10, 0.6) 100%);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.certification-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(79, 70, 229, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.certification-card:hover::before {
+    opacity: 1;
+}
+
+.cert-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.certification-card:hover .cert-icon {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 12px var(--primary));
+}
+
+.cert-name {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.cert-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.cert-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.detail-icon {
+    color: var(--primary);
+    font-size: 1rem;
+    min-width: 20px;
+}
+
+.credential-id {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    background: rgba(79, 70, 229, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.verify-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.verify-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Certificate Image Styles */
+.cert-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(79, 70, 229, 0.2);
+    transition: all 0.3s ease;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-image-container:hover {
+    border-color: rgba(79, 70, 229, 0.5);
+    transform: scale(1.02);
+}
+
+.cert-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.cert-image-container:hover .cert-image {
+    transform: scale(1.05);
+}
+
+.cert-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cert-image-container:hover .cert-image-overlay {
+    opacity: 1;
+}
+
+.cert-image-overlay span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: rgba(79, 70, 229, 0.8);
+    border-radius: 8px;
+}
+
+/* Modal Styles */
+.cert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.cert-modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cert-modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.cert-modal-close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.cert-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: rotate(90deg);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .licenses-section {
+        padding: 4rem 2rem;
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .licenses-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .certification-card {
+        padding: 2rem;
+    }
+
+    .cert-name {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .licenses-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .certification-card {
+        padding: 1.8rem;
+    }
+
+    .cert-icon {
+        font-size: 2.5rem;
+    }
+
+    .cert-name {
+        font-size: 1.1rem;
+    }
+
+    .cert-detail {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .certification-card {
+        padding: 1.5rem;
+    }
+
+    .cert-icon {
+        font-size: 2.2rem;
+    }
+}
