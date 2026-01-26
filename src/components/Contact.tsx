@@ -11,7 +11,7 @@ const Contact = () => {
       if (contentRef.current) {
         const elementPosition = contentRef.current.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
-        
+
         if (elementPosition < screenPosition) {
           contentRef.current.classList.add('active');
         }
@@ -31,8 +31,8 @@ const Contact = () => {
       </div>
       <div className="contact-content animate" ref={contentRef}>
         <p>
-          I'm always interested in discussing new opportunities, collaborative projects, or innovative 
-          ideas. Whether you have a specific project in mind or would like to explore potential synergies, 
+          I'm always interested in discussing new opportunities, collaborative projects, or innovative
+          ideas. Whether you have a specific project in mind or would like to explore potential synergies,
           feel free to reach out.
         </p>
         <a href="mailto:kianflorendo20@gmail.com" className="btn btn-primary">Send an Email</a>
@@ -43,7 +43,7 @@ const Contact = () => {
           <a href="https://github.com/kianflorendo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://www.facebook.com/share/17vat21mVx/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <a href="https://www.facebook.com/share/1GxdSdmFF2/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a href="https://www.instagram.com/_kiannzzzz?igsh=aTZhdXo0bXRhcXF1" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

@@ -41,10 +41,10 @@ const Hero = () => {
             <a href="https://github.com/kianangeloflorendo" target="_blank" rel="noopener noreferrer" className="social-icon">
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="https://www.facebook.com/kian.florendo" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.facebook.com/share/1GxdSdmFF2/" target="_blank" rel="noopener noreferrer" className="social-icon">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="https://www.instagram.com/kianflorendo/" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <a href="https://www.instagram.com/_kiannzzzz?igsh=aTZhdXo0bXRhcXF1" target="_blank" rel="noopener noreferrer" className="social-icon">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
