@@ -34,7 +34,7 @@ const Hero = () => {
         </div>
         <div className="hero-image">
           <img src="/images/8dd41a2c-f254-4a1a-a29d-474d95d88edc.jpg" alt="Kian Angelo Florendo" />
-          <div className="social-links">
+          <div className="hero-social-links">
             <a href="https://www.linkedin.com/in/kian-angelo-florendo/" target="_blank" rel="noopener noreferrer" className="social-icon">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>

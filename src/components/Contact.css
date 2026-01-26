@@ -16,6 +16,11 @@
   line-height: 1.7;
 }
 
+.contact .btn-primary {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -39,23 +44,10 @@
   overflow: hidden;
 }
 
-.social-links a::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--primary);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 .social-links a:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
   border-color: var(--primary);
-}
-
-.social-links a:hover::before {
-  opacity: 1;
 }
 
 .social-links a svg {

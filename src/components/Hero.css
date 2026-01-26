@@ -137,7 +137,7 @@
 }
 
 /* Social Media Links */
-.social-links {
+.hero-social-links {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -218,7 +218,7 @@
     height: 350px;
   }
 
-  .social-links {
+  .hero-social-links {
     gap: 1.2rem;
     margin-top: 1.5rem;
   }
